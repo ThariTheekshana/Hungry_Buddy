@@ -2,6 +2,7 @@
 import "package:flutter/material.dart";
 import "package:hungry_buddy/Components/my_button.dart";
 import "package:hungry_buddy/Components/my_textFields.dart";
+import "package:hungry_buddy/Services/Auth/auth_service.dart";
 
 class RegisterPage extends StatefulWidget {
   final void Function()? onTap;
@@ -16,6 +17,39 @@ class _RegisterPageState extends State<RegisterPage> {
   TextEditingController emailConroller = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   TextEditingController confirmPasswordController = TextEditingController();
+
+  // register method
+  void register() async {
+    // get auth service
+    final _authService = AuthServices();
+
+    // check if password match --> create user
+    if (passwordController.text == confirmPasswordController.text) {
+      // try creating user
+      try {
+        await _authService.signUpWithEmailPassword(
+          emailConroller.text,
+          passwordController.text,
+        );
+      }
+
+      // display any errors
+      catch (e) {
+        showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+            title: Text(e.toString()),
+          ),
+        );
+      }
+    } else {
+      showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+                title: Text("Password don't match!!"),
+              ));
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +95,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
           const SizedBox(height: 25),
 
-           // confirm password textfirld
+          // confirm password textfirld
           MyTextField(
             controller: confirmPasswordController,
             hintText: "Confirm Password",
@@ -70,10 +104,11 @@ class _RegisterPageState extends State<RegisterPage> {
 
           const SizedBox(height: 25),
 
-
           // Sign in button
           MyButton(
-            onTap: () {},
+            onTap: () {
+              register();
+            },
             text: "Sign Up",
           ),
 

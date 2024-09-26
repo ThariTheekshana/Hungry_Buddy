@@ -1,9 +1,11 @@
 // Page/login_page.dart
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:hungry_buddy/Components/my_button.dart';
 import 'package:hungry_buddy/Components/my_textFields.dart';
-import 'package:hungry_buddy/Page/home_page.dart';
+import 'package:hungry_buddy/Services/Auth/auth_service.dart';
 
 class LoginPage extends StatefulWidget {
   final void Function()? onTap;
@@ -21,20 +23,29 @@ class _LoginPageState extends State<LoginPage> {
   TextEditingController passwordController = TextEditingController();
 
   // login method
-  void login() {
-    /* 
-    
-    fill out authentication here
+  void login() async {
+    // get instance of auth service
+    final _authService = AuthServices();
 
-    */
+    // try sign in
+    try {
+      await _authService.signInWithEmailPassword(
+        emailConroller.text,
+        passwordController.text,
+      );
+    }
 
-    // navigate to home screen
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => const HomePage(),
-      ),
-    );
+    // display any errors
+    catch (e) {
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: Text(
+            e.toString(),
+          ),
+        ),
+      );
+    }
   }
 
   @override

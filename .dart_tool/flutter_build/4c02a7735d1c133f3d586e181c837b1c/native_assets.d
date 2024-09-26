@@ -1,0 +1,1 @@
+ /Users/tharitheekshana/Documents/GitHub/Hungry_Buddy/.dart_tool/flutter_build/4c02a7735d1c133f3d586e181c837b1c/native_assets.yaml: 

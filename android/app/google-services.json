@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "862959251334",
+    "project_id": "hungrybuddy-c6557",
+    "storage_bucket": "hungrybuddy-c6557.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:862959251334:android:86b0e7cdc4b105cb0bc607",
+        "android_client_info": {
+          "package_name": "com.example.hungry_buddy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXA1FhX6o4G6owiI_YnX4AT1J-Y9xVsr4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

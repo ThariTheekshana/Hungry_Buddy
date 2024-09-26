@@ -85,9 +85,9 @@ class _FoodPageState extends State<FoodPage> {
                       // food description
                       Text(
                         widget.food.description,
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 15,
-                          color: Colors.black,
+                          color: Theme.of(context).colorScheme.inversePrimary,
                         ),
                       ),
 
