@@ -2,6 +2,7 @@
 import "package:flutter/material.dart";
 import "package:hungry_buddy/Components/my_drawer_tile.dart";
 import "package:hungry_buddy/Page/settings_page.dart";
+import "package:hungry_buddy/Services/Auth/auth_service.dart";
 
 class MyDrawer extends StatefulWidget {
   const MyDrawer({super.key});
@@ -11,6 +12,11 @@ class MyDrawer extends StatefulWidget {
 }
 
 class _MyDrawerState extends State<MyDrawer> {
+  void logout() {
+    final authService = AuthServices();
+    authService.signOut();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -61,7 +67,9 @@ class _MyDrawerState extends State<MyDrawer> {
             // logout list tile
             MyDrawerTile(
               text: "L O G O U T",
-              onTap: () {},
+              onTap: () {
+                logout();
+              },
               icon: Icons.logout_sharp,
             ),
 

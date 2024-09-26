@@ -1,11 +1,17 @@
 // main.dart
+// main.dartt// main.dartt
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:hungry_buddy/Auth/login_or_register.dart';
+import 'package:hungry_buddy/Services/Auth/auth_gate.dart';
 import 'package:hungry_buddy/Models/resturant.dart';
 import 'package:hungry_buddy/Themes/theme_provider.dart';
+import 'package:hungry_buddy/firebase_options.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
   runApp(
     MultiProvider(
       providers: [
@@ -27,7 +33,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: const LoginOrRegister(),
+        home: const AuthGate(),
         theme: Provider.of<ThemeProvider>(context).themeData);
   }
 }
