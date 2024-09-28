@@ -18,7 +18,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		EargwG754gRIfLLxvZb978TqzoE=
+		qDrbP16EQwUIAq37sZ/uG7p72Ss=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		4WC1fWEjIO+RCVNZSfTY5xrXS3U=
+		Jp1FLmF8uQaP32nnfvrMEI65qg4=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		bXJOjaQ74aOPU2/2m9VXmb0spqI=
+		ZJZ29IdAXnVo23Kvuh7Vn8LyhGo=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/NOTICES.Z</key>
 		<data>
-		mBtLMqP0mwnpETHzGTTmrd2OJCc=
+		kLdjep3yYbq50uCIW7WqC6itR3A=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/fonts/MaterialIcons-Regular.otf</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		H15/4WUGj2kVNtvL2lh64MqcQfc=
+		9R+WkK1lS6nvZOVd2oKHSdadyXw=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/lib/assets/images/burgers/BBQburger.jpg</key>
 		<data>
@@ -716,7 +716,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+29SB9dKVJMHh5u2QHjAy+aU+DOHXGeGhXKuA35FNSg=
+			s+dVPpkH3yTASTBoojqpiwdjHiJuYicph7ZAPZBF3+8=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
@@ -765,7 +765,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			UrMw4N2sKO91ZpMUJk6niEz2tKSdo3uHsGtUKDxQkRI=
+			x6/KPVdT8tsw+uaDUcxdl6GWPdnS7SyXz85hRGB72+E=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -779,7 +779,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			r+/uiNU3zJN8sN3M+jhBsFjAe2T/oIjd0nSM+kmGTLQ=
+			zQlfvwTMN/GgL2td9mDMCn0FmH86XO0Yt5mYHI9ImR0=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
@@ -807,7 +807,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7u80szlflR8SWMd8dvnhOb3Y55Pzya0HGFDemLvlpF4=
+			ohuiYh1s0c+zIXsACBSEcFH68eV0CCwR+ro2imxXNL0=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/fonts/MaterialIcons-Regular.otf</key>
@@ -828,7 +828,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/mkXwJ0udzWseJ2x8bn5X3FyA4waA4eCvlFwljPr+8c=
+			S+2IWJv8QeBs9SltocteWFoB2CeKwHIYgmYNR3NfGlM=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/lib/assets/images/burgers/BBQburger.jpg</key>

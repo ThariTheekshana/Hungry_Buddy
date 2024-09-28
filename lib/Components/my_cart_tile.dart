@@ -2,6 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hungry_buddy/Components/my_quantity_selector.dart';
 import 'package:hungry_buddy/Models/cart_item.dart';
 import 'package:hungry_buddy/Models/resturant.dart';
@@ -18,27 +19,27 @@ class MyCartTile extends StatelessWidget {
       builder: (context, restaurent, child) => Container(
         decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.secondary,
-          borderRadius: BorderRadius.circular(8),
+          borderRadius: BorderRadius.circular(8.r),
         ),
-        margin: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+        margin:  EdgeInsets.symmetric(horizontal: 25.w, vertical: 10.h),
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding:  EdgeInsets.all(8.0.r),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   // food name
                   ClipRRect(
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(12.r),
                     child: Image.asset(
                       cartItem.food.imagePath,
-                      height: 100,
-                      width: 100,
+                      height: 100.h,
+                      width: 100.w,
                     ),
                   ),
 
-                  const SizedBox(width: 10),
+                   SizedBox(width: 10.w),
 
                   // name and price
                   Expanded(
@@ -60,8 +61,8 @@ class MyCartTile extends StatelessWidget {
                           ),
                         ),
 
-                        const SizedBox(
-                          height: 10,
+                         SizedBox(
+                          height: 10.w,
                         ),
 
                         // increment or decrement quantity
@@ -89,11 +90,11 @@ class MyCartTile extends StatelessWidget {
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   padding:
-                      const EdgeInsets.only(left: 10, bottom: 10, right: 10),
+                       EdgeInsets.only(left: 10.w, bottom: 10.h, right: 10.w),
                   children: cartItem.selectedAddons
                       .map(
                         (addon) => Padding(
-                          padding: const EdgeInsets.only(right: 8.0),
+                          padding:  EdgeInsets.only(right: 8.0.w),
                           child: FilterChip(
                             label: Row(
                               children: [
@@ -115,7 +116,7 @@ class MyCartTile extends StatelessWidget {
                             labelStyle: TextStyle(
                               color:
                                   Theme.of(context).colorScheme.inversePrimary,
-                              fontSize: 12,
+                              fontSize: 12.sp,
                             ),
                           ),
                         ),

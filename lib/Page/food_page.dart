@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hungry_buddy/Components/my_button.dart';
 import 'package:hungry_buddy/Models/food.dart';
 import 'package:hungry_buddy/Models/resturant.dart';
@@ -56,16 +57,16 @@ class _FoodPageState extends State<FoodPage> {
                 Image.asset(widget.food.imagePath),
 
                 Padding(
-                  padding: const EdgeInsets.all(25.0),
+                  padding:  EdgeInsets.all(25.0.r),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       // food name
                       Text(
                         widget.food.name,
-                        style: const TextStyle(
+                        style:  TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 20,
+                          fontSize: 20.sp,
                         ),
                       ),
 
@@ -73,33 +74,33 @@ class _FoodPageState extends State<FoodPage> {
                       Text(
                         '\$${widget.food.price}',
                         style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 16.sp,
                           color: Theme.of(context).colorScheme.primary,
                         ),
                       ),
 
-                      const SizedBox(
-                        height: 10.0,
+                       SizedBox(
+                        height: 10.0.h,
                       ),
 
                       // food description
                       Text(
                         widget.food.description,
                         style: TextStyle(
-                          fontSize: 15,
+                          fontSize: 15.sp,
                           color: Theme.of(context).colorScheme.inversePrimary,
                         ),
                       ),
 
-                      const SizedBox(
-                        height: 10.0,
+                       SizedBox(
+                        height: 10.0.h,
                       ),
 
                       // divider
                       Divider(color: Theme.of(context).colorScheme.secondary),
 
-                      const SizedBox(
-                        height: 10.0,
+                       SizedBox(
+                        height: 10.0.h,
                       ),
 
                       // addons
@@ -107,23 +108,23 @@ class _FoodPageState extends State<FoodPage> {
                         'Add-ons',
                         style: TextStyle(
                           color: Theme.of(context).colorScheme.inversePrimary,
-                          fontSize: 16,
+                          fontSize: 16.sp,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
 
-                      const SizedBox(
-                        height: 10.0,
+                       SizedBox(
+                        height: 10.0.h,
                       ),
 
                       // Scrollable container for add-ons
                       Container(
-                        height: 200, // Set the height for the scrollable area
+                        height: 200.h, // Set the height for the scrollable area
                         decoration: BoxDecoration(
                           border: Border.all(
                             color: Theme.of(context).colorScheme.secondary,
                           ),
-                          borderRadius: BorderRadius.circular(8),
+                          borderRadius: BorderRadius.circular(8.r),
                         ),
                         child: ListView.builder(
                           padding: EdgeInsets.zero,
@@ -161,7 +162,7 @@ class _FoodPageState extends State<FoodPage> {
                   text: "Add to Cart",
                 ),
 
-                const SizedBox(height: 35),
+                 SizedBox(height: 35.h),
               ],
             ),
           ),
@@ -169,7 +170,7 @@ class _FoodPageState extends State<FoodPage> {
 
         // back Button
         Padding(
-          padding: const EdgeInsets.only(left: 10.0),
+          padding:  EdgeInsets.only(left: 10.0.w),
           child: SafeArea(
             child: Opacity(
               opacity: 0.6,

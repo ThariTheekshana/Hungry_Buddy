@@ -2,6 +2,7 @@
 // main.dartt// main.dartt
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hungry_buddy/Services/Auth/auth_gate.dart';
 import 'package:hungry_buddy/Models/resturant.dart';
 import 'package:hungry_buddy/Themes/theme_provider.dart';
@@ -31,9 +32,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: const AuthGate(),
-        theme: Provider.of<ThemeProvider>(context).themeData);
+    return ScreenUtilInit(
+      designSize:
+          const Size(360, 690), // Set the design screen size (width, height)
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) {
+        return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            home: const AuthGate(),
+            theme: Provider.of<ThemeProvider>(context).themeData);
+      },
+    );
   }
 }

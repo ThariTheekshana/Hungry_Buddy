@@ -1,5 +1,6 @@
 // Components/my_drawer.dart
 import "package:flutter/material.dart";
+import "package:flutter_screenutil/flutter_screenutil.dart";
 import "package:hungry_buddy/Components/my_drawer_tile.dart";
 import "package:hungry_buddy/Page/settings_page.dart";
 import "package:hungry_buddy/Services/Auth/auth_service.dart";
@@ -25,16 +26,16 @@ class _MyDrawerState extends State<MyDrawer> {
           children: [
             // app logo
             Padding(
-              padding: const EdgeInsets.only(top: 100.0),
+              padding:  EdgeInsets.only(top: 100.0.h),
               child: Icon(
                 Icons.lock_open_rounded,
-                size: 80,
+                size: 80.r,
                 color: Theme.of(context).colorScheme.inversePrimary,
               ),
             ),
 
             Padding(
-              padding: const EdgeInsets.all(25.0),
+              padding:  EdgeInsets.all(25.0.r),
               child: Divider(
                 color: Theme.of(context).colorScheme.secondary,
               ),
@@ -73,8 +74,8 @@ class _MyDrawerState extends State<MyDrawer> {
               icon: Icons.logout_sharp,
             ),
 
-            const SizedBox(
-              height: 25.0,
+             SizedBox(
+              height: 25.0.h,
             )
           ],
         ));

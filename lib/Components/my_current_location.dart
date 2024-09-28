@@ -1,5 +1,6 @@
 // Components/my_current_location.dart
 import "package:flutter/material.dart";
+import "package:flutter_screenutil/flutter_screenutil.dart";
 import "package:hungry_buddy/Models/resturant.dart";
 import "package:provider/provider.dart";
 
@@ -52,7 +53,7 @@ class MyCurrentlocation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(25.0),
+      padding:  EdgeInsets.all(25.0.r),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

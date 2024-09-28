@@ -1,5 +1,6 @@
 // Components/my_sliver_appbar.dart
 import "package:flutter/material.dart";
+import "package:flutter_screenutil/flutter_screenutil.dart";
 import "package:hungry_buddy/Page/cart_page.dart";
 
 class MySliverAppBar extends StatelessWidget {
@@ -36,12 +37,12 @@ class MySliverAppBar extends StatelessWidget {
       title: const Text("Sunset Dinner"),
       flexibleSpace: FlexibleSpaceBar(
         background: Padding(
-          padding: const EdgeInsets.only(bottom: 50.0),
+          padding:  EdgeInsets.only(bottom: 50.0.h),
           child: child,
         ),
         title: title,
         centerTitle: true,
-        titlePadding: const EdgeInsets.only(left: 0, right: 0, top: 0),
+        titlePadding:  EdgeInsets.only(left: 0.w, right: 0.w, top: 0.h),
         expandedTitleScale: 1,
       ),
     );

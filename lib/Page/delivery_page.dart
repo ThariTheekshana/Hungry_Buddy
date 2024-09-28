@@ -2,6 +2,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hungry_buddy/Components/my_receipt.dart';
 import 'package:hungry_buddy/Models/resturant.dart';
 import 'package:hungry_buddy/Services/Database/firestore.dart';
@@ -37,12 +38,12 @@ class _DeliveryPageState extends State<DeliveryPage> {
       bottomNavigationBar: _buildBottomNavBar(context),
 
       // Change the body to a SingleChildScrollView with padding
-      body: const SingleChildScrollView(
+      body:  SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.only(
               bottom:
-                  20), // Add padding for spacing between content and the bottom nav
-          child: Column(
+                  20.h), // Add padding for spacing between content and the bottom nav
+          child: const Column(
             children: [
               MyReceipt(),
             ],
@@ -55,12 +56,12 @@ class _DeliveryPageState extends State<DeliveryPage> {
   // Custom Bottom Navigation Bar for message / call delivery driver
   Widget _buildBottomNavBar(BuildContext context) {
     return Container(
-      height: 100,
+      height: 100.h,
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.secondary,
-        borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(40),
-          topRight: Radius.circular(40),
+        borderRadius:  BorderRadius.only(
+          topLeft: Radius.circular(40.r),
+          topRight: Radius.circular(40.r),
         ),
       ),
       padding: const EdgeInsets.all(25),
@@ -77,7 +78,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
               onPressed: () {},
             ),
           ),
-          const SizedBox(width: 10.0),
+           SizedBox(width: 10.0.w),
 
           // Driver details
           Column(
@@ -87,7 +88,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
                 "Jane Thomson",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 16,
+                    fontSize: 16.sp,
                     color: Theme.of(context).colorScheme.inversePrimary),
               ),
               Text(
@@ -114,7 +115,7 @@ class _DeliveryPageState extends State<DeliveryPage> {
                   onPressed: () {},
                 ),
               ),
-              const SizedBox(width: 10),
+               SizedBox(width: 10.w),
 
               // Call button
               Container(

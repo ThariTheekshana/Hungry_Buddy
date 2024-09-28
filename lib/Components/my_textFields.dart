@@ -1,5 +1,6 @@
 // Components/my_textFields.dart
 import "package:flutter/material.dart";
+import "package:flutter_screenutil/flutter_screenutil.dart";
 
 class MyTextField extends StatelessWidget {
   final TextEditingController controller;
@@ -15,7 +16,7 @@ class MyTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 25.0),
+      padding:  EdgeInsets.symmetric(horizontal: 25.0.w),
       child: TextField(
         controller: controller,
         obscureText: obscureText,

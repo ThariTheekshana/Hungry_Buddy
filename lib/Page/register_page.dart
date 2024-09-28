@@ -1,5 +1,6 @@
 // Page/register_page.dart
 import "package:flutter/material.dart";
+import "package:flutter_screenutil/flutter_screenutil.dart";
 import "package:hungry_buddy/Components/my_button.dart";
 import "package:hungry_buddy/Components/my_textFields.dart";
 import "package:hungry_buddy/Services/Auth/auth_service.dart";
@@ -45,7 +46,7 @@ class _RegisterPageState extends State<RegisterPage> {
     } else {
       showDialog(
           context: context,
-          builder: (context) => AlertDialog(
+          builder: (context) => const AlertDialog(
                 title: Text("Password don't match!!"),
               ));
     }
@@ -60,22 +61,22 @@ class _RegisterPageState extends State<RegisterPage> {
           // logo
           Icon(
             Icons.lock_open_rounded,
-            size: 100,
+            size: 100.r,
             color: Theme.of(context).colorScheme.inversePrimary,
           ),
 
-          const SizedBox(height: 25),
+           SizedBox(height: 25.h),
 
           //message, app slogan
           Text(
             "Create an account",
             style: TextStyle(
-                fontSize: 16,
+                fontSize: 16.sp,
                 fontWeight: FontWeight.bold,
                 color: Theme.of(context).colorScheme.inversePrimary),
           ),
 
-          const SizedBox(height: 25),
+           SizedBox(height: 25.h),
 
           // email textfield
           MyTextField(
@@ -84,7 +85,7 @@ class _RegisterPageState extends State<RegisterPage> {
             obscureText: false,
           ),
 
-          const SizedBox(height: 25),
+           SizedBox(height: 25.h),
 
           // password textfirld
           MyTextField(
@@ -93,7 +94,7 @@ class _RegisterPageState extends State<RegisterPage> {
             obscureText: true,
           ),
 
-          const SizedBox(height: 25),
+           SizedBox(height: 25.h),
 
           // confirm password textfirld
           MyTextField(
@@ -102,7 +103,7 @@ class _RegisterPageState extends State<RegisterPage> {
             obscureText: true,
           ),
 
-          const SizedBox(height: 25),
+           SizedBox(height: 25.h),
 
           // Sign in button
           MyButton(
@@ -112,7 +113,7 @@ class _RegisterPageState extends State<RegisterPage> {
             text: "Sign Up",
           ),
 
-          const SizedBox(height: 25),
+           SizedBox(height: 25.h),
 
           // already have an account Login here
           Row(
@@ -124,7 +125,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   color: Theme.of(context).colorScheme.inversePrimary,
                 ),
               ),
-              const SizedBox(width: 4),
+               SizedBox(width: 4.w),
               GestureDetector(
                 onTap: widget.onTap,
                 child: Text(

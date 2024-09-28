@@ -1,6 +1,7 @@
 // Page/settings_page.dart
 import "package:flutter/cupertino.dart";
 import "package:flutter/material.dart";
+import "package:flutter_screenutil/flutter_screenutil.dart";
 import "package:hungry_buddy/Themes/theme_provider.dart";
 import "package:provider/provider.dart";
 
@@ -27,10 +28,10 @@ class _SettingsPageState extends State<SettingsPage> {
           Container(
             decoration: BoxDecoration(
               color: Theme.of(context).colorScheme.secondary,
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(12.r),
             ),
-            padding: const EdgeInsets.all(25),
-            margin: const EdgeInsets.only(left: 25, right: 25, top: 10),
+            padding:  EdgeInsets.all(25.r),
+            margin:  EdgeInsets.only(left: 25.w, right: 25.w, top: 10.h),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

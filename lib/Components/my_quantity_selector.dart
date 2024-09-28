@@ -1,5 +1,6 @@
 // Components/my_quantity_selector.dart
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hungry_buddy/Models/food.dart';
 
 class QuantitySelector extends StatelessWidget {
@@ -21,9 +22,9 @@ class QuantitySelector extends StatelessWidget {
     return Container(
         decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.background,
-          borderRadius: BorderRadius.circular(50),
+          borderRadius: BorderRadius.circular(50.r),
         ),
-        padding: const EdgeInsets.all(8),
+        padding:  EdgeInsets.all(8.r),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -32,16 +33,16 @@ class QuantitySelector extends StatelessWidget {
               onTap: onDecrement,
               child: Icon(
                 Icons.remove,
-                size: 20,
+                size: 20.r,
                 color: Theme.of(context).colorScheme.primary,
               ),
             ),
 
             // quantity count
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 8),
+              padding:  EdgeInsets.symmetric(horizontal: 8.w),
               child: SizedBox(
-                width: 20,
+                width: 20.w,
                 child: Center(
                   child: Text(
                     quantity.toString(),
@@ -55,7 +56,7 @@ class QuantitySelector extends StatelessWidget {
               onTap: onIncrement,
               child: Icon(
                 Icons.add,
-                size: 20,
+                size: 20.r,
                 color: Theme.of(context).colorScheme.primary,
               ),
             ),

@@ -3,6 +3,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hungry_buddy/Components/my_button.dart';
 import 'package:hungry_buddy/Components/my_textFields.dart';
 import 'package:hungry_buddy/Services/Auth/auth_service.dart';
@@ -57,22 +58,22 @@ class _LoginPageState extends State<LoginPage> {
           // logo
           Icon(
             Icons.lock_open_rounded,
-            size: 100,
+            size: 100.r,
             color: Theme.of(context).colorScheme.inversePrimary,
           ),
 
-          const SizedBox(height: 25),
+           SizedBox(height: 25.h),
 
           //message, app slogan
           Text(
             "Hungry Buddy",
             style: TextStyle(
-                fontSize: 16,
+                fontSize: 16.sp,
                 fontWeight: FontWeight.bold,
                 color: Theme.of(context).colorScheme.inversePrimary),
           ),
 
-          const SizedBox(height: 25),
+           SizedBox(height: 25.h),
 
           // email textfield
           MyTextField(
@@ -81,7 +82,7 @@ class _LoginPageState extends State<LoginPage> {
             obscureText: false,
           ),
 
-          const SizedBox(height: 25),
+           SizedBox(height: 25.h),
 
           // password textfirld
           MyTextField(
@@ -90,7 +91,7 @@ class _LoginPageState extends State<LoginPage> {
             obscureText: true,
           ),
 
-          const SizedBox(height: 25),
+           SizedBox(height: 25.h),
 
           // Sign in button
           MyButton(
@@ -98,7 +99,7 @@ class _LoginPageState extends State<LoginPage> {
             text: "Sign In",
           ),
 
-          const SizedBox(height: 25),
+           SizedBox(height: 25.h),
 
           // not a member? register now
           Row(
@@ -110,7 +111,7 @@ class _LoginPageState extends State<LoginPage> {
                   color: Theme.of(context).colorScheme.inversePrimary,
                 ),
               ),
-              const SizedBox(width: 4),
+               SizedBox(width: 4.w),
               GestureDetector(
                 onTap: widget.onTap,
                 child: Text(

@@ -1,6 +1,7 @@
 // Components/my_food_tile.dart
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hungry_buddy/Models/food.dart';
 
 class FoodTile extends StatelessWidget {
@@ -16,7 +17,7 @@ class FoodTile extends StatelessWidget {
         GestureDetector(
           onTap: ontap,
           child: Padding(
-            padding: const EdgeInsets.all(15.0),
+            padding:  EdgeInsets.all(15.0.r),
             child: Row(
               children: [
                 // text food details
@@ -30,7 +31,7 @@ class FoodTile extends StatelessWidget {
                         style: TextStyle(
                             color: Theme.of(context).colorScheme.primary),
                       ),
-                      const SizedBox(height: 10.0),
+                       SizedBox(height: 10.0.h),
                       Text(
                         food.description,
                         style: TextStyle(
@@ -41,14 +42,14 @@ class FoodTile extends StatelessWidget {
                   ),
                 ),
 
-                const SizedBox(width: 15),
+                 SizedBox(width: 15.w),
 
                 // food image
                 ClipRRect(
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(8.r),
                   child: Image.asset(
                     food.imagePath,
-                    height: 120.0,
+                    height: 120.0.h,
                   ),
                 )
               ],
@@ -59,8 +60,8 @@ class FoodTile extends StatelessWidget {
         // dicider line
         Divider(
           color: Theme.of(context).colorScheme.tertiary,
-          endIndent: 25,
-          indent: 25,
+          endIndent: 25.w,
+          indent: 25.w,
         )
       ],
     );

@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hungry_buddy/Components/my_button.dart';
 import 'package:hungry_buddy/Page/delivery_page.dart';
 
@@ -104,8 +105,8 @@ class _PaymentpageState extends State<Paymentpage> {
               text: "Pay now",
             ),
 
-            const SizedBox(
-              height: 35,
+             SizedBox(
+              height: 35.h,
             ),
           ],
         ));

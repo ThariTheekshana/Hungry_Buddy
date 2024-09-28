@@ -1,6 +1,7 @@
 // Page/home_page.dart
 import "package:flutter/material.dart";
 import "package:flutter/widgets.dart";
+import "package:flutter_screenutil/flutter_screenutil.dart";
 import "package:hungry_buddy/Components/my_current_location.dart";
 import "package:hungry_buddy/Components/my_description_box.dart";
 import "package:hungry_buddy/Components/my_drawer.dart";
@@ -85,8 +86,8 @@ class _HomePageState extends State<HomePage>
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Divider(
-                  indent: 25,
-                  endIndent: 25,
+                  indent: 25.w,
+                  endIndent: 25.w,
                   color: Theme.of(context).colorScheme.secondary,
                 ),
 

@@ -1,6 +1,7 @@
 // Page/cart_page.dart
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hungry_buddy/Components/my_button.dart';
 import 'package:hungry_buddy/Components/my_cart_tile.dart';
 import 'package:hungry_buddy/Models/resturant.dart';
@@ -68,12 +69,12 @@ class _CartPageState extends State<CartPage> {
                 child: Column(
                   children: [
                     userCart.isEmpty
-                        ? const Expanded(
+                        ? Expanded(
                             child: Center(
                                 child: Text(
                             "Cart is empty...",
                             style: TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.bold),
+                                fontSize: 16.sp, fontWeight: FontWeight.bold),
                           )))
                         : Expanded(
                             child: ListView.builder(
@@ -99,8 +100,8 @@ class _CartPageState extends State<CartPage> {
                 text: "Go to the Pay",
               ),
 
-              const SizedBox(
-                height: 25,
+              SizedBox(
+                height: 25.h,
               )
             ],
           ));

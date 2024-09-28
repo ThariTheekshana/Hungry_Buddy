@@ -1,5 +1,6 @@
 // Components/my_receipt.dart
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hungry_buddy/Models/resturant.dart';
 import 'package:provider/provider.dart';
 
@@ -9,7 +10,7 @@ class MyReceipt extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: const EdgeInsets.only(left: 25, right: 25, bottom: 5, top: 5),
+        padding:  EdgeInsets.only(left: 25.w, right: 25.w, bottom: 5.h, top: 5.h),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -17,23 +18,23 @@ class MyReceipt extends StatelessWidget {
               const Text(
                 "Thank you for your order!",
               ),
-              const SizedBox(
-                height: 25,
+               SizedBox(
+                height: 25.h,
               ),
               Container(
                 decoration: BoxDecoration(
                   border: Border.all(
                       color: Theme.of(context).colorScheme.secondary),
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(8.r),
                 ),
-                padding: const EdgeInsets.all(25),
+                padding:  EdgeInsets.all(25.r),
                 child: Consumer<Resturant>(
                   builder: (context, restaurent, child) =>
                       Text(restaurent.displayCartReceipt()),
                 ),
               ),
-              const SizedBox(
-                height: 20,
+               SizedBox(
+                height: 20.h,
               ),
               const Text("Estimated delivery time is: 6:20 PM")
             ],
