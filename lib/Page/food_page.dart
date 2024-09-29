@@ -119,7 +119,7 @@ class _FoodPageState extends State<FoodPage> {
 
                       // Scrollable container for add-ons
                       Container(
-                        height: 200.h, // Set the height for the scrollable area
+                        height: 130.h, // Set the height for the scrollable area
                         decoration: BoxDecoration(
                           border: Border.all(
                             color: Theme.of(context).colorScheme.secondary,

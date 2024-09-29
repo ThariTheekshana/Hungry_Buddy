@@ -60,55 +60,57 @@ class _PaymentpageState extends State<Paymentpage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: Theme.of(context).colorScheme.background,
-        appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          foregroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: const Text(
-            'Checkout',
+    return SingleChildScrollView(
+      child: Scaffold(
+          backgroundColor: Theme.of(context).colorScheme.background,
+          appBar: AppBar(
+            backgroundColor: Colors.transparent,
+            foregroundColor: Theme.of(context).colorScheme.inversePrimary,
+            title: const Text(
+              'Checkout',
+            ),
           ),
-        ),
-        body: Column(
-          children: [
-            // credit card
-            CreditCardWidget(
-              cardNumber: cardNumber,
-              expiryDate: expiryDate,
-              cardHolderName: cardHolderName,
-              cvvCode: cvvCode,
-              showBackView: isCvvFocused,
-              onCreditCardWidgetChange: ((p0) {}),
-            ),
-
-            // credit card form
-            CreditCardForm(
-              cardNumber: cardNumber,
-              expiryDate: expiryDate,
-              cardHolderName: cardHolderName,
-              cvvCode: cvvCode,
-              onCreditCardModelChange: (data) {
-                setState(() {
-                  cardNumber = data.cardNumber;
-                  expiryDate = data.expiryDate;
-                  cardHolderName = data.cardHolderName;
-                  cvvCode = data.cvvCode;
-                });
-              },
-              formKey: formKey,
-            ),
-
-            const Spacer(),
-
-            MyButton(
-              onTap: userTappedPay,
-              text: "Pay now",
-            ),
-
-             SizedBox(
-              height: 35.h,
-            ),
-          ],
-        ));
+          body: Column(
+            children: [
+              // credit card
+              CreditCardWidget(
+                cardNumber: cardNumber,
+                expiryDate: expiryDate,
+                cardHolderName: cardHolderName,
+                cvvCode: cvvCode,
+                showBackView: isCvvFocused,
+                onCreditCardWidgetChange: ((p0) {}),
+              ),
+      
+              // credit card form
+              CreditCardForm(
+                cardNumber: cardNumber,
+                expiryDate: expiryDate,
+                cardHolderName: cardHolderName,
+                cvvCode: cvvCode,
+                onCreditCardModelChange: (data) {
+                  setState(() {
+                    cardNumber = data.cardNumber;
+                    expiryDate = data.expiryDate;
+                    cardHolderName = data.cardHolderName;
+                    cvvCode = data.cvvCode;
+                  });
+                },
+                formKey: formKey,
+              ),
+      
+              const Spacer(),
+      
+              MyButton(
+                onTap: userTappedPay,
+                text: "Pay now",
+              ),
+      
+               SizedBox(
+                height: 35.h,
+              ),
+            ],
+          )),
+    );
   }
 }
